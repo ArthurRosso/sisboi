@@ -6,6 +6,7 @@ import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -22,6 +23,9 @@ public class Animal implements Serializable {
 	private String id;
 
 	private Date date;
+	
+	@ManyToOne
+	private User user;
 
 	public Long getCod() {
 		return cod;
