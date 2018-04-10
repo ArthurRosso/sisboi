@@ -6,6 +6,7 @@ import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,6 +25,9 @@ public class Weight implements Serializable {
 	private String description;
 	
 	private Date date;
+	
+	@ManyToOne
+	private Animal animal;
 
 	public Long getCod() {
 		return cod;

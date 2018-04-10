@@ -2,11 +2,13 @@ package br.edu.ifrs.canoas.tcc.sisbov.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -26,6 +28,9 @@ public class Animal implements Serializable {
 	
 	@ManyToOne
 	private User user;
+	
+	@OneToMany (mappedBy = "animal")
+	private List<Weight> weight;
 
 	public Long getCod() {
 		return cod;
