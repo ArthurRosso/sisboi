@@ -25,7 +25,7 @@ public class Animal implements Serializable {
 
 	private String id;
 
-	private Date date;
+	private Date birthday;
 	
 	@ManyToOne
 	private User user;
@@ -58,12 +58,12 @@ public class Animal implements Serializable {
 		this.id = id;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getBirthday() {
+		return birthday;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 	public User getUser() {
