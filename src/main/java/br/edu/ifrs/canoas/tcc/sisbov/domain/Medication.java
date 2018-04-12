@@ -22,6 +22,9 @@ public class Medication implements Serializable {
 	private Long cod;
 	
 	private Date date;
+	
+	@ManyToMany
+	private List<Animal> animal;
 
 	public Long getCod() {
 		return cod;
@@ -37,5 +40,13 @@ public class Medication implements Serializable {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public List<Animal> getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(List<Animal> animal) {
+		this.animal = animal;
 	}
 }

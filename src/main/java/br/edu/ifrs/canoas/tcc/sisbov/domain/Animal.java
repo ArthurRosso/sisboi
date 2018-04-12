@@ -41,6 +41,9 @@ public class Animal implements Serializable {
 	
 	@ManyToOne
 	private TypeAnimal type;
+	
+	@ManyToMany
+	private List<Medication> medication;
 
 	public Long getCod() {
 		return cod;
