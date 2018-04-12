@@ -25,6 +25,9 @@ public class Medication implements Serializable {
 	
 	@ManyToMany
 	private List<Animal> animal;
+	
+	@ManyToMany
+	private List<Medicine> medicine;
 
 	public Long getCod() {
 		return cod;
@@ -48,5 +51,13 @@ public class Medication implements Serializable {
 
 	public void setAnimal(List<Animal> animal) {
 		this.animal = animal;
+	}
+
+	public List<Medicine> getMedicine() {
+		return medicine;
+	}
+
+	public void setMedicine(List<Medicine> medicine) {
+		this.medicine = medicine;
 	}
 }

@@ -2,10 +2,12 @@ package br.edu.ifrs.canoas.tcc.sisbov.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,6 +26,9 @@ public class Medicine implements Serializable {
 	private String description;
 	
 	private Date expiration;
+	
+	@ManyToMany
+	private List<Medication> medication;
 
 	public Long getCod() {
 		return cod;
@@ -55,5 +60,13 @@ public class Medicine implements Serializable {
 
 	public void setExpiration(Date expiration) {
 		this.expiration = expiration;
+	}
+
+	public List<Medication> getMedication() {
+		return medication;
+	}
+
+	public void setMedication(List<Medication> medication) {
+		this.medication = medication;
 	}
 }
