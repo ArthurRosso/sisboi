@@ -26,6 +26,9 @@ public class Breed implements Serializable {
 	
 	@OneToMany (mappedBy = "breed")
 	private List<Animal> animal;
+	
+	@OneToMany (mappedBy = "breed")
+	private List<TypeAnimal> typeAnimal;
 
 	public Long getCod() {
 		return cod;
@@ -49,5 +52,21 @@ public class Breed implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Animal> getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(List<Animal> animal) {
+		this.animal = animal;
+	}
+
+	public List<TypeAnimal> getTypeAnimal() {
+		return typeAnimal;
+	}
+
+	public void setTypeAnimal(List<TypeAnimal> typeAnimal) {
+		this.typeAnimal = typeAnimal;
 	}
 }

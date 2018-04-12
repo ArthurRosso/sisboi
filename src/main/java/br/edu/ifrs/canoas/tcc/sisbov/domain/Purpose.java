@@ -50,4 +50,12 @@ public class Purpose implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public List<Animal> getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(List<Animal> animal) {
+		this.animal = animal;
+	}
 }

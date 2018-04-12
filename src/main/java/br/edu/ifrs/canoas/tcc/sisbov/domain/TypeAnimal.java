@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -26,6 +27,9 @@ public class TypeAnimal implements Serializable {
 	
 	@OneToMany (mappedBy = "type")
 	private List<Animal> animal;
+	
+	@ManyToOne
+	private Breed breed;
 
 	public Long getCod() {
 		return cod;
@@ -49,5 +53,21 @@ public class TypeAnimal implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Animal> getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(List<Animal> animal) {
+		this.animal = animal;
+	}
+
+	public Breed getBreed() {
+		return breed;
+	}
+
+	public void setBreed(Breed breed) {
+		this.breed = breed;
 	}
 }

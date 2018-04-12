@@ -97,4 +97,12 @@ public class User implements Serializable {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+
+	public List<Animal> getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(List<Animal> animal) {
+		this.animal = animal;
+	}
 }

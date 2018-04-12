@@ -60,4 +60,12 @@ public class Weight implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
 }

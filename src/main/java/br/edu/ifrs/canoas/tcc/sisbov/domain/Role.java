@@ -34,4 +34,12 @@ public class Role {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	public Set<User> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(Set<User> accounts) {
+		this.accounts = accounts;
+	}
 }

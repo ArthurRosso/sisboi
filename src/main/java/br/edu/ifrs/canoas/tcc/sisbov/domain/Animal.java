@@ -65,4 +65,44 @@ public class Animal implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<Weight> getWeight() {
+		return weight;
+	}
+
+	public void setWeight(List<Weight> weight) {
+		this.weight = weight;
+	}
+
+	public Breed getBreed() {
+		return breed;
+	}
+
+	public void setBreed(Breed breed) {
+		this.breed = breed;
+	}
+
+	public List<Purpose> getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(List<Purpose> purpose) {
+		this.purpose = purpose;
+	}
+
+	public TypeAnimal getType() {
+		return type;
+	}
+
+	public void setType(TypeAnimal type) {
+		this.type = type;
+	}
 }
