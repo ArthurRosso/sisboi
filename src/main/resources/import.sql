@@ -11,6 +11,6 @@ INSERT INTO ROLE (cod, role) VALUES (2, 'ROLE_USER');
 INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('root', 1);
 INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('tio', 2);
 
-INSERT INTO ANIMAL (cod, id, date, user_username) VALUES (1, 'José', parsedatetime('23/07/2015', 'dd/MM/yyyy'),'root');
-INSERT INTO ANIMAL (cod, id, date, user_username) VALUES (2, 'Maria', parsedatetime('01/02/2016', 'dd/MM/yyyy'),'root');
-INSERT INTO ANIMAL (cod, id, date, user_username) VALUES (3, 'João', parsedatetime('22/01/2018', 'dd/MM/yyyy'),'root');
+INSERT INTO ANIMAL (cod, id, birthday, user_username) VALUES (1, 'José', parsedatetime('23/07/2015', 'dd/MM/yyyy'),'root');
+INSERT INTO ANIMAL (cod, id, birthday, user_username) VALUES (2, 'Maria', parsedatetime('01/02/2016', 'dd/MM/yyyy'),'root');
+INSERT INTO ANIMAL (cod, id, birthday, user_username) VALUES (3, 'João', parsedatetime('22/01/2018', 'dd/MM/yyyy'),'root');

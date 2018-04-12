@@ -1,10 +1,12 @@
 package br.edu.ifrs.canoas.tcc.sisbov.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,6 +23,9 @@ public class TypeMedicine implements Serializable {
 	private String type;
 	
 	private String description;
+	
+	@OneToMany (mappedBy = "type")
+	private List<Medicine> medicine;
 
 	public Long getCod() {
 		return cod;
