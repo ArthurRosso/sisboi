@@ -36,11 +36,11 @@ public class User implements Serializable {
 	@JsonIgnore
 	private File picture;
 	
-	@OneToMany (mappedBy = "user")
-	private List<Animal> animal;
-	
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<Role> roles;
+	
+	@OneToMany (mappedBy = "user")
+	private List<Animal> animal;
 
 	public String getUsername() {
 		return username;

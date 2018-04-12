@@ -1,10 +1,12 @@
 package br.edu.ifrs.canoas.tcc.sisbov.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,6 +23,9 @@ public class Breed implements Serializable {
 	private String breed;
 	
 	private String description;
+	
+	@OneToMany (mappedBy = "breed")
+	private List<Animal> animal;
 
 	public Long getCod() {
 		return cod;

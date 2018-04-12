@@ -31,6 +31,9 @@ public class Animal implements Serializable {
 	
 	@OneToMany (mappedBy = "animal")
 	private List<Weight> weight;
+	
+	@ManyToOne
+	private Breed breed;
 
 	public Long getCod() {
 		return cod;
