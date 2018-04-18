@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Sisboi - Ver Animais</title>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+
+<!--Import materialize.css-->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+</head>
+<body>
+
+	<header>
+
+		<nav class="teal darken-4">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
+					data-activates="mobile-demo" class="button-collapse"><i
+					class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="novoAnimal.html">Novo Animal</a></li>
+					<li><a href="novoRemedio.html">Novo Remédio</a></li>
+					<li><a href="/verAnimais">Ver Animais</a></li>
+					<li><a href="fazerMedicacao.html">Fazer Medicação</a></li>
+					<li><a href="/logout">Sair</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="/novoAnimal">Novo Animal</a></li>
+					<li><a href="/novoRemedio">Novo Remédio</a></li>
+					<li><a href="/animais">Ver Animais</a></li>
+					<li><a href="/novaMedicacao">Fazer Medicação</a></li>
+					<li><a href="/logout">Sair</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Identificador</th>
+				<th>Nascimento</th>
+				<th>Peso</th>
+				<th>Tipo</th>
+				<th>Raça</th>
+				<th>Finalidade</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="animal : ${animais}">
+				<td><span th:text="${animal.id}"></span></td>
+				<td><span class="dd/MM/yyyy" th:text="${animal.birthday}"></span></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><i class="material-icons left">delete</i></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".button-collapse").sideNav();
+		})
+	</script>
+
+</body>
+
+
+</html>

@@ -17,9 +17,9 @@ INSERT INTO TYPE_ANIMAL (cod, type, description) VALUES (1, 'Touro', 'Macho bovi
 INSERT INTO TYPE_ANIMAL (cod, type, description) VALUES (2, 'Vaca', 'Fêmea bovina');
 INSERT INTO TYPE_ANIMAL (cod, type, description) VALUES (3, 'Boi', 'Macho bovino castrado');
 
-INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (1, parsedatetime('23/07/2015', 'dd/MM/yyyy'), 'José', 1, 1, 'root');
-INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (2, parsedatetime('01/02/2016', 'dd/MM/yyyy'), 'Maria', 1, 2, 'root');
-INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (3, parsedatetime('22/01/2018', 'dd/MM/yyyy'), 'João', 1, 3, 'root');
+INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (1, parsedatetime('23/07/2015', 'dd/MM/yyyy'), 'José', 1, 1, 'ArthurRosso');
+INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (2, parsedatetime('01/02/2016', 'dd/MM/yyyy'), 'Maria', 1, 2, 'ArthurRosso');
+INSERT INTO ANIMAL (cod, birthday, id, breed_cod, type_cod, user_username) VALUES (3, parsedatetime('22/01/2018', 'dd/MM/yyyy'), 'João', 1, 3, 'ArthurRosso');
 
 INSERT INTO WEIGHT (cod, date, description, nweight, animal_cod) VALUES (1, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '800', 1);
 INSERT INTO WEIGHT (cod, date, description, nweight, animal_cod) VALUES (2, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '750', 2);
