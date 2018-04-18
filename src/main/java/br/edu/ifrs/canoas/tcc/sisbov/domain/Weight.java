@@ -68,4 +68,8 @@ public class Weight implements Serializable {
 	public void setAnimal(Animal animal) {
 		this.animal = animal;
 	}
+	
+	public String toString () {
+		return Float.toString(getNweight());
+	}
 }

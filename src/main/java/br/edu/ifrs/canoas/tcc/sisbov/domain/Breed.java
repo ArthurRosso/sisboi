@@ -69,4 +69,8 @@ public class Breed implements Serializable {
 	public void setTypeAnimal(List<TypeAnimal> typeAnimal) {
 		this.typeAnimal = typeAnimal;
 	}
+	
+	public String toString () {
+		return getBreed();
+	}
 }

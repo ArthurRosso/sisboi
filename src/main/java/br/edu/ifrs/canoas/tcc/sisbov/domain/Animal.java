@@ -108,4 +108,23 @@ public class Animal implements Serializable {
 	public void setType(TypeAnimal type) {
 		this.type = type;
 	}
+	
+	public String getLastWeight() {
+		if (weight.isEmpty()) {
+			return "-";
+		}
+		return this.weight.get(weight.size()-1).toString();
+	}
+	
+	public String getPurposes(){
+		if (purpose.isEmpty()) {
+			return "-";
+		}
+		String res = purpose.get(0).toString();
+		for (Purpose p : purpose.subList(1, purpose.size())){
+			res += ", " + p;
+		}
+		
+		return res;
+	}
 }

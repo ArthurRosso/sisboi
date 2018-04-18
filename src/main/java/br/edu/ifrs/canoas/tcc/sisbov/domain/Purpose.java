@@ -58,4 +58,8 @@ public class Purpose implements Serializable {
 	public void setAnimal(List<Animal> animal) {
 		this.animal = animal;
 	}
+	
+	public String toString () {
+		return getPurpose();
+	}
 }

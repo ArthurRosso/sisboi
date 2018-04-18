@@ -70,4 +70,8 @@ public class TypeAnimal implements Serializable {
 	public void setBreed(Breed breed) {
 		this.breed = breed;
 	}
+	
+	public String toString () {
+		return getType();
+	}
 }

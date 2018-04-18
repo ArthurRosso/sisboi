@@ -57,11 +57,11 @@
 		<tbody>
 			<tr th:each="animal : ${animais}">
 				<td><span th:text="${animal.id}"></span></td>
-				<td><span class="dd/MM/yyyy" th:text="${animal.birthday}"></span></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><span th:text="${animal.birthday}"></span></td>
+				<td><span th:text="${animal.getLastWeight()}"></span></td>
+				<td><span th:text="${animal.type}"></span></td>
+				<td><span th:text="${animal.breed}"></span></td>
+				<td><span th:text="${animal.getPurposes()}"></span></td>
 				<td><i class="material-icons left">delete</i></td>
 			</tr>
 		</tbody>

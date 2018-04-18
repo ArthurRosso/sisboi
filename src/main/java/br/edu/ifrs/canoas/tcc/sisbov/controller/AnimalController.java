@@ -21,11 +21,4 @@ public class AnimalController {
 		mv.addObject("animais", animais);
 		return mv;
 	}
-
-	@RequestMapping("/deletarAnimal")
-	public String deletarAnimal(Long cod){
-		Animal animal = ar.findByCod(cod);
-		ar.delete(animal);
-		return "redirect:/animais";
-	}
 }
