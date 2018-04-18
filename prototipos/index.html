@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+	<title>Sisboi</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+
+	<!--Import materialize.css-->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+
+</head>
+
+<body>
+
+	<header>
+
+		<nav class="teal darken-4">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
+				data-activates="mobile-demo" class="button-collapse"><i
+				class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="novoAnimal.html">Novo Animal</a></li>
+					<li><a href="novoRemedio.html">Novo Remédio</a></li>
+					<li><a href="verAnimais.html">Ver Animais</a></li>
+					<li><a href="fazerMedicacao.html">Fazer Medicação</a></li>
+					<li><a href="/logout">Sair</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="novoAnimal">Novo Animal</a></li>
+					<li><a href="novoRemedio">Novo Remédio</a></li>
+					<li><a href="verAnimais">Ver Animais</a></li>
+					<li><a href="fazerMedicacao">Fazer Medicação</a></li>
+					<li><a href="/logout">Sair</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<!-- Page Layout here -->
+	<div class="row">
+
+		<div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+
+			<div class="row">
+				<div>
+					<div class="card-panel">
+						<div class="center-align">
+							<img src="https://scontent.fpoa15-1.fna.fbcdn.net/v/t1.0-9/29066570_984934884990613_4406194253043073024_n.jpg?_nc_cat=0&oh=6e659641d8bf6c5db8066cb7de89a986&oe=5B5C9EC6" class="circle center-align" alt="Avatar" style="width:200px">
+						</div>
+						<div class="center-align">
+							<span>Arthur de Rosso </span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+		<div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<div class="row">
+
+						<div class="col s6">
+							<img src="http://www.agromafra.com.br/images/fotos/angus%20vendas/grandes/21.jpg" style="width:200px">
+						</div>
+						<div class="col s6">
+							<img src="http://ourofinosaudeanimal.com/media/uploads/produtos/2018/Ourovac_Aftosa_50ml_OF45.png" style="width:200px">
+						</div>
+						
+					</div>
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Nova medicação de João com a Ourovac® Aftosa!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver João</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<div class="row">
+
+						<div class="col s6">
+							<img src="http://iepec.com/wp-content/uploads/2015/03/Touro-Angus-a-Campo-679x570.jpg" style="width:200px">
+						</div>
+						<div class="col s6">
+							<img src="http://ourofinosaudeanimal.com/media/uploads/produtos/2018/Ourovac_Aftosa_50ml_OF45.png" style="width:200px">
+						</div>
+
+					</div>				
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Nova medicação de Maria com a Ourovac® Aftosa!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver Maria</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<div class="row">
+
+						<div class="col s6">
+							<img src="http://ruralpecuaria.com.br/painel/img/noticias/533/noticias_1406497986.jpg" style="width:200px">
+						</div>
+						<div class="col s6">
+							<img src="http://ourofinosaudeanimal.com/media/uploads/produtos/2018/Ourovac_Aftosa_50ml_OF45.png" style="width:200px">
+						</div>
+
+					</div>
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Nova medicação de José com a Ourovac® Aftosa!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver José</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<img src="http://ourofinosaudeanimal.com/media/uploads/produtos/2018/Ourovac_Aftosa_50ml_OF45.png" style="width:200px">
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Novo remédio: Ourovac® Aftosa!</p>
+					</div>
+					<div class="card-action">
+						<a href="remedio.html">Ver Ourovac® Aftosa</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<img src="http://www.agromafra.com.br/images/fotos/angus%20vendas/grandes/21.jpg" style="width:200px">
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Novo animal: João!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver João</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<img src="http://iepec.com/wp-content/uploads/2015/03/Touro-Angus-a-Campo-679x570.jpg" style="width:200px">
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Novo animal: Maria!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver Maria</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<img src="http://ruralpecuaria.com.br/painel/img/noticias/533/noticias_1406497986.jpg" style="width:200px">
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>Novo animal: José!</p>
+					</div>
+					<div class="card-action">
+						<a href="animal.html">Ver José</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".button-collapse").sideNav();
+			})
+		</script>
+	</body>
+
+
+	</html>

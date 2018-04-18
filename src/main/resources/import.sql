@@ -2,14 +2,14 @@
 INSERT INTO FILE (cod, content) VALUES (1,  FILE_READ('./src/main/resources/static/img/face.png'));
 INSERT INTO FILE (cod, content) VALUES (2,  FILE_READ('./src/main/resources/static/img/tio.png'));
 
-INSERT INTO USER (username, active, email, name, password, picture_cod) VALUES ('root', TRUE, 'root@gmail.com', 'Rootson da Silva', 'root', 1);
-INSERT INTO USER (username, active, email, name, password, picture_cod) VALUES ('tio', TRUE, 'tio@gmail.com', 'Usuário teste 001', 'tio', 2);
+INSERT INTO USER (username, active, email, name, password, picture_cod) VALUES ('ArthurRosso', TRUE, 'arthurderosso@gmail.com', 'Arthur de Rosso', 'root', 1);
+INSERT INTO USER (username, active, email, name, password, picture_cod) VALUES ('teste', TRUE, 'tio@gmail.com', 'Usuário teste 001', 'teste', 2);
 
 INSERT INTO ROLE (cod, role) VALUES (1, 'ROLE_ADMIN');
 INSERT INTO ROLE (cod, role) VALUES (2, 'ROLE_USER');
 
-INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('root', 1);
-INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('tio', 2);
+INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('ArthurRosso', 1);
+INSERT INTO USER_ROLES (user_username, roles_cod) VALUES ('teste', 2);
 
 INSERT INTO BREED (cod, breed, description) VALUES (1, 'Angus', 'O Aberdeen Angus se destaca entre as raças taurinas por reunir um maior número de características positivas que lhe asseguram um excelente resultado econômico como gado de corte. O conjunto de suas características a tornam uma raça completa.');
 
@@ -40,9 +40,9 @@ INSERT INTO MEDICINE (cod, name, description, expiration, type_cod) VALUES (1, '
 
 INSERT INTO MEDICATION_MEDICINE (medication_cod, medicine_cod) VALUES (1, 1);
 
-INSERT INTO PURPOSE (cod, purpose, description) VALUES (1, 'Genetics', 'Criar crias');
-INSERT INTO PURPOSE (cod, purpose, description) VALUES (2, 'Milk', 'Leite quente que dói os dente da gente');
-INSERT INTO PURPOSE (cod, purpose, description) VALUES (3, 'Meat', 'Carne ou engorda');
+INSERT INTO PURPOSE (cod, purpose, description) VALUES (1, 'Genética', 'Animal destinado exclusivamente para gerar descendentes.');
+INSERT INTO PURPOSE (cod, purpose, description) VALUES (2, 'Leite', 'Animal destinado a produção de leite.');
+INSERT INTO PURPOSE (cod, purpose, description) VALUES (3, 'Engorda', 'Animal destinado a engorda para produção de carne.');
 
 INSERT INTO PURPOSE_ANIMAL (purpose_cod, animal_cod) VALUES (1,1);
 INSERT INTO PURPOSE_ANIMAL (purpose_cod, animal_cod) VALUES (2,2);

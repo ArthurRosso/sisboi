@@ -1,0 +1,33 @@
+#panell {
+	margin-top: 100px;
+	padding: 0px;
+}
+
+#loginbtn {
+	float: right;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#title {
+	background-color: #004d40;
+	color: white;
+	padding: 8px;
+	margin-top: 0px
+}
+
+form {
+	padding: 0px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	margin-right: 40px;
+}
+
+#username, #password, p {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+a {
+	margin-bottom: 10px;
+}
