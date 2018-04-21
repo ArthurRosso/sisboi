@@ -15,25 +15,25 @@ public class AnimalController {
 	@Autowired
 	private AnimalRepository ar;
 	
-	@RequestMapping("/verAnimais")
-	public ModelAndView listaAnimais(){
-		ModelAndView mv = new ModelAndView("verAnimais");
-		Iterable<Animal> animais = ar.findAll();
-		mv.addObject("animais", animais);
+	@RequestMapping("/showAnimals")
+	public ModelAndView showAnimals(){
+		ModelAndView mv = new ModelAndView("showAnimals");
+		Iterable<Animal> animals = ar.findAll();
+		mv.addObject("animals", animals);
 		return mv;
 	}
 	
-	@RequestMapping(value="/novoAnimal", method=RequestMethod.GET)
-	public String novoAnimal () {
-		return "novoAnimal";
+	@RequestMapping(value="/newAnimal", method=RequestMethod.GET)
+	public String newAnimal () {
+		return "newAnimal";
 	}
 
 	
-	@RequestMapping(value="/novoAnimal", method=RequestMethod.POST)
-	public String novoAnimal (Animal animal) {
+	@RequestMapping(value="/newAnimal", method=RequestMethod.POST)
+	public String newAnimal (Animal animal) {
 		
 		ar.save(animal);
 		
-		return "redirect:/novoAnimal";
+		return "redirect:/newAnimal";
 	}
 }
