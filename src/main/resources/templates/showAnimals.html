@@ -2,7 +2,7 @@
 <html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<title>Sisboi - Ver Animais</title>
+<title>Sisboi - Show Animals</title>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,8 +55,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="animal : ${animais}">
-				<td><span th:text="${animal.id}"></span></td>
+			<tr th:each="animal : ${animals}">
+				<td><a th:href="${(#mvc.url('AC#detalhesAnimal').arg(0, animal.cod)).build()}"><span
+						th:text="${animal.id}"></span></a></td>
 				<td><span th:text="${animal.birthday}"></span></td>
 				<td><span th:text="${animal.getLastWeight()}"></span></td>
 				<td><span th:text="${animal.type}"></span></td>
