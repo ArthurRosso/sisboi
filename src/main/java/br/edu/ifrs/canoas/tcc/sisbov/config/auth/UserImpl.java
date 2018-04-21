@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 public class UserImpl extends org.springframework.security.core.userdetails.User{
 	
+	private static final long serialVersionUID = 1L;
 	private User user;
 
     public UserImpl(String username, String password, Collection<? extends GrantedAuthority> authorities, User user) {

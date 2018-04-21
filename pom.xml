@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.edu.ifrs.canoas.tcc.sisbov</groupId>
-	<artifactId>pecuariaapp</artifactId>
+	<artifactId>sisboi</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>pecuariaapp</name>
+	<name>sisboi</name>
 	<description>TCC mais bonito e reprojetado</description>
 
 	<parent>

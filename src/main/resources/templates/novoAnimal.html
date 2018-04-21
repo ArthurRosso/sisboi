@@ -2,9 +2,11 @@
 <html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<title>Sisboi</title>
+
+<title>Sisboi - Novo Animal</title>
 
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -14,8 +16,6 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -25,8 +25,8 @@
 		<nav class="teal darken-4">
 			<div class="nav-wrapper">
 				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
-				data-activates="mobile-demo" class="button-collapse"><i
-				class="material-icons">menu</i></a>
+					data-activates="mobile-demo" class="button-collapse"><i
+					class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="/novoAnimal">Novo Animal</a></li>
 					<li><a href="/novoRemedio">Novo Remédio</a></li>
@@ -46,12 +46,33 @@
 
 	</header>
 
+	<div class="row">
+		<div class="container">
+			<div class="card-panel">
+				<form method="post">
+					<div class="row">
+						<div class="input-field col s3">
+							Identificador: <input type="text" name="id" />
+						</div>
+						<div class="input-field col s3">
+							Nascimento: <input type="date" name="birthday" />
+						</div>
+					</div>
+					<div class="right-align">
+						<button class="btn waves-effect waves-light teal darken-3"
+							type="submit" name="action">
+							Salvar <i class="material-icons right">save</i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript"
 		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".button-collapse").sideNav();
