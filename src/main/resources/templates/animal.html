@@ -54,9 +54,7 @@
 			<div class="row">
 				<div class="card-panel">
 					<div class="center-align">
-						<img
-							src="/src/main/resources/static/img/{animal.id}.jpg"
-							alt="Avatar" style="width: 200px" />
+						<img src="../../img/João.jpg" alt="Avatar" style="width: 200px" />
 					</div>
 					<div class="center-align">
 						<span th:text="${animal.id}"></span>
@@ -93,27 +91,24 @@
 						</div>
 					</div>
 
-					<div class="card-panel">
-						<div class="center-align">
-							<h5>Árvore genealógica:</h5>
-						</div>
-						<div class="row">
 
-							<div class="col s6">
-								<p>Pai:</p>
-								<img
-									src="/src/main/resources/static/img/José.jpg"
-									style="width: 100px" />
-							</div>
-							<div class="col s6">
-								<p>Mãe:</p>
-								<img
-									src="./src/main/resources/static/img/Maria.png"
-									style="width: 100px" />
-							</div>
+				</div>
+
+				<div class="card-panel">
+					<div class="center-align">
+						<h5>Árvore genealógica:</h5>
+					</div>
+					<div class="row">
+
+						<div class="col s6">
+							<p>Pai:</p>
+							<img src="../../img/José.jpg" style="width: 100px" />
+						</div>
+						<div class="col s6">
+							<p>Mãe:</p>
+							<img src="../../img/Maria.png" style="width: 100px" />
 						</div>
 					</div>
-
 				</div>
 
 			</div>
@@ -127,9 +122,7 @@
 					<div class="row">
 
 						<div class="col s6">
-							<img
-								src="/src/main/resources/static/img/{animal.id}.jpg"
-								style="width: 200px" />
+							<img src="../../img/João.jpg" style="width: 200px" />
 						</div>
 						<div class="col s6">
 							<img
@@ -141,7 +134,10 @@
 				</div>
 				<div class="card-stacked">
 					<div class="card-content">
-						<p>Nova medicação de <span th:text="${animal.id}"></span> com a Ourovac® Aftosa!</p>
+						<p>
+							Nova medicação de <span th:text="${animal.id}"></span> com a
+							Ourovac® Aftosa!
+						</p>
 					</div>
 					<div class="card-action">
 						<a href="/{animal.cod}">Ver <span th:text="${animal.id}"></span></a>
@@ -151,13 +147,13 @@
 
 			<div class="card horizontal">
 				<div class="card-image">
-					<img
-						src="/src/main/resources/static/img/joao.jpg.png"
-						style="width: 200px" />
+					<img src="../../img/João.jpg" style="width: 200px" />
 				</div>
 				<div class="card-stacked">
 					<div class="card-content">
-						<p><span th:text="${animal.id}"></span> adicionado com sucesso!</p>
+						<p>
+							<span th:text="${animal.id}"></span> adicionado com sucesso!
+						</p>
 					</div>
 					<div class="card-action">
 						<a href="/{animal.cod}">Ver <span th:text="${animal.id}"></span></a>
