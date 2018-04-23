@@ -3,6 +3,7 @@ package br.edu.ifrs.canoas.tcc.sisbov.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.edu.ifrs.canoas.tcc.sisbov.domain.Medicine;
@@ -20,6 +21,20 @@ public class MedicineController {
 		Iterable<Medicine> medicines = mr.findAll();
 		mv.addObject("medicines", medicines);
 		return mv;
+	}
+	
+	@RequestMapping(value="/newMedicine", method=RequestMethod.GET)
+	public String newMedicine () {
+		return "newMedicine";
+	}
+
+	
+	@RequestMapping(value="/newMedicine", method=RequestMethod.POST)
+	public String newMedicine (Medicine medicine) {
+		
+		mr.save(medicine);
+		
+		return "redirect:/newMedicine";
 	}
 
 }

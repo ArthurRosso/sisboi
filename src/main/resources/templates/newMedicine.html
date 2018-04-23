@@ -2,7 +2,8 @@
 <html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<title>Sisboi - Show Animals</title>
+
+<title>Sisboi - Novo Remédio</title>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,9 @@
 <!--Import materialize.css-->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+
 </head>
+
 <body>
 
 	<header>
@@ -45,32 +48,50 @@
 
 	</header>
 
-	<table class="container">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Expiration</th>
-				<th>Type</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="medicine : ${medicines}">
-				<td><span th:text="${medicine.name}"></span></td>
-				<td><span th:text="${medicine.description}"></span></td>
-				<td><span class="dd/MM/yyyy" th:text="${medicine.expiration}"></span></td>
-				<td><span th:text="${medicine.type}"></span></td>
-				<td><i class="material-icons left">delete</i></td>
-			</tr>
-		</tbody>
+	<div class="row">
+		<div class="container">
+			<div class="card-panel">
+				<form method="post">
+					<div class="row">
+						<div class="input-field col s3">
+							Name: <input type="text" name="name" />
+						</div>
+						<div class="input-field col s3">
+							Expiration: <input type="date" name="expiration" />
+						</div>
+						<div class="input-field col s3">
+							Description: <input type="text" name="description" />
+						</div>
+						<div class="input-field col s3">
+							Type: <input type="text" />
+						</div>
+						<div class="input-field col s6">
+							<div class="file-field input-field">
+								<div class="btn teal darken-3">
+									<span>Photo</span> <input type="file" />
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-align">
+						<button class="btn waves-effect waves-light teal darken-3"
+							type="submit" name="action">
+							Save <i class="material-icons right">save</i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 
-	</table>
+	</div>
 
 	<script type="text/javascript"
 		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".button-collapse").sideNav();

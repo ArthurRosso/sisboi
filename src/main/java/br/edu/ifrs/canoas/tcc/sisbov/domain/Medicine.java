@@ -1,7 +1,7 @@
 package br.edu.ifrs.canoas.tcc.sisbov.domain;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
