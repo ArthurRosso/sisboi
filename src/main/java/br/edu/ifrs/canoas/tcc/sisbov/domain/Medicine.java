@@ -73,4 +73,12 @@ public class Medicine implements Serializable {
 	public void setMedication(List<Medication> medication) {
 		this.medication = medication;
 	}
+
+	public TypeMedicine getType() {
+		return type;
+	}
+
+	public void setType(TypeMedicine type) {
+		this.type = type;
+	}
 }

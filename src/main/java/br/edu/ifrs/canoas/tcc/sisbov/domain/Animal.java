@@ -109,6 +109,14 @@ public class Animal implements Serializable {
 		this.type = type;
 	}
 	
+	public List<Medication> getMedication() {
+		return medication;
+	}
+
+	public void setMedication(List<Medication> medication) {
+		this.medication = medication;
+	}
+	
 	public String getLastWeight() {
 		if (weight.isEmpty()) {
 			return "-";
@@ -127,4 +135,5 @@ public class Animal implements Serializable {
 		
 		return res;
 	}
+	
 }
