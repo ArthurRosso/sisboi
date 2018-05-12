@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="248" Top="58"/>
-		<TotalItens Valor="206"/>
+		<Posicao Left="19" Top="58"/>
+		<TotalItens Valor="210"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -34,10 +34,10 @@
       <Height Valor="66"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="60">
-          <Left Valor="77"/>
+        <Atributo nome="ID" id="60">
+          <Left Valor="86"/>
           <Top Valor="366"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -324,10 +324,10 @@
       <Height Valor="66"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="129">
-          <Left Valor="66"/>
+        <Atributo nome="ID" id="129">
+          <Left Valor="76"/>
           <Top Valor="247"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -469,10 +469,10 @@
       <Height Valor="66"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="268">
-          <Left Valor="77"/>
+        <Atributo nome="ID" id="268">
+          <Left Valor="87"/>
           <Top Valor="143"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -550,10 +550,10 @@
       <Height Valor="66"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="278">
+        <Atributo nome="ID" id="278">
           <Left Valor="847"/>
           <Top Valor="137"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -760,8 +760,8 @@
       <Fonte default="-1"/>
       <Atributos>
         <Atributo nome="DATE" id="45">
-          <Left Valor="459"/>
-          <Top Valor="493"/>
+          <Left Valor="467"/>
+          <Top Valor="500"/>
           <Width Valor="56"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -791,10 +791,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="ID" id="39">
-          <Left Valor="455"/>
-          <Top Valor="470"/>
-          <Width Valor="40"/>
+        <Atributo nome="NAME" id="39">
+          <Left Valor="431"/>
+          <Top Valor="466"/>
+          <Width Valor="58"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -823,10 +823,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="COD" id="9">
-          <Left Valor="425"/>
+        <Atributo nome="ID" id="9">
+          <Left Valor="432"/>
           <Top Valor="449"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -849,6 +849,38 @@
           <Ligacoes>
             <Ligacao Destino_ID="2">
               <MostraCardinalidade Valor="0" Card_id="11"/>
+              <Cardinalidades Cardinalidade="4"/>
+              <Orientacao Valor="0"/>
+              <Fraca Valor="0"/>
+            </Ligacao>
+          </Ligacoes>
+        </Atributo>
+        <Atributo nome="ACTIVE" id="414">
+          <Left Valor="439"/>
+          <Top Valor="483"/>
+          <Width Valor="67"/>
+          <Height Valor="16"/>
+          <Fonte default="-1"/>
+          <Atributos/>
+          <AtributosOcultos/>
+          <Dicionario></Dicionario>
+          <Nula Valor="0"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <MaxCard Valor="1"/>
+          <MinCard Valor="1"/>
+          <Composto Valor="0"/>
+          <Identificador Valor="0"/>
+          <Tipo Valor="Texto(1)"/>
+          <Multivalorado Valor="0"/>
+          <Orientacao Valor="2"/>
+          <TamAuto Valor="-1"/>
+          <Desvio Valor="10"/>
+          <BarraID Valor="415"/>
+          <Ligacoes>
+            <Ligacao Destino_ID="2">
+              <MostraCardinalidade Valor="0" Card_id="416"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>
@@ -936,10 +968,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="COD" id="15">
+        <Atributo nome="ID" id="15">
           <Left Valor="758"/>
-          <Top Valor="285"/>
-          <Width Valor="50"/>
+          <Top Valor="287"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1049,10 +1081,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="COD" id="12">
+        <Atributo nome="ID" id="12">
           <Left Valor="992"/>
           <Top Valor="619"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1194,10 +1226,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="COD" id="6">
-          <Left Valor="678"/>
+        <Atributo nome="ID" id="6">
+          <Left Valor="677"/>
           <Top Valor="622"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1243,10 +1275,10 @@
       <Height Valor="66"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="229">
-          <Left Valor="1122"/>
+        <Atributo nome="ID" id="229">
+          <Left Valor="1121"/>
           <Top Valor="366"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1723,10 +1755,10 @@
       <Height Valor="51"/>
       <Fonte default="-1"/>
       <Atributos>
-        <Atributo nome="COD" id="370">
+        <Atributo nome="ID" id="370">
           <Left Valor="654"/>
           <Top Valor="435"/>
-          <Width Valor="50"/>
+          <Width Valor="40"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1928,7 +1960,7 @@
       </Ligacoes>
     </Relacao>
     <Relacao nome="HAVE_TYPE" id="376">
-      <Left Valor="484"/>
+      <Left Valor="489"/>
       <Top Valor="516"/>
       <Width Valor="102"/>
       <Height Valor="51"/>
@@ -1974,7 +2006,7 @@
           <MostraCardinalidade Valor="-1" Card_id="394"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="394">
-              <Left Valor="535"/>
+              <Left Valor="540"/>
               <Top Valor="425"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
