@@ -22,6 +22,8 @@ public class Animal implements Serializable {
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
 	private Long id;
+	
+	private boolean active;
 
 	private String name;
 
@@ -51,6 +53,14 @@ public class Animal implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public String getName() {
