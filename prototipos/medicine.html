@@ -3,7 +3,7 @@
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 
-	<title>Sisboi - Novo Remédio</title>
+	<title>Sisboi - Medicine</title>
 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,22 +24,20 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 		<nav class="teal darken-4">
 			<div class="nav-wrapper">
-				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
+				<a href="index.html" class="brand-logo">Sisboi</a> <a href="index.html"
 				data-activates="mobile-demo" class="button-collapse"><i
 				class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="novoAnimal.html">Novo Animal</a></li>
-					<li><a href="novoRemedio.html">Novo Remédio</a></li>
-					<li><a href="verAnimais.html">Ver Animais</a></li>
-					<li><a href="fazerMedicacao.html">Fazer Medicação</a></li>
-					<li><a href="/logout">Sair</a></li>
+					<li><a href="animal.html">Animal</a></li>
+					<li><a href="medicine.html">Medicine</a></li>
+					<li><a href="medication.html">Medication</a></li>
+					<li><a href="login.html">Sair</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-demo">
-					<li><a href="/novoAnimal">Novo Animal</a></li>
-					<li><a href="/novoRemedio">Novo Remédio</a></li>
-					<li><a href="/animais">Ver Animais</a></li>
-					<li><a href="/novaMedicacao">Fazer Medicação</a></li>
-					<li><a href="/logout">Sair</a></li>
+					<li><a href="animal.html">Animal</a></li>
+					<li><a href="medicine.html">Medicine</a></li>
+					<li><a href="medication.html">Medication</a></li>
+					<li><a href="login.html">Logout</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -63,17 +61,6 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 						<div class="input-field col s3">
 							Tipo: <input type="text" name="type" />
 						</div>
-						<div class="input-field col s6">
-							<div class="file-field input-field">
-								<div class="btn teal darken-3">
-									<span>Fotos</span>
-									<input type="file" multiple>
-								</div>
-								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text" placeholder="Uma ou mais fotos.">
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="right-align">
 						<button class="btn waves-effect waves-light teal darken-3"
@@ -84,18 +71,38 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 			</form>
 		</div>
 	</div>
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Validade</th>
+				<th>Tipo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="medicine : ${medicines}">
+				<td><span th:text="${medicine.name}"></span><a href="remedio - Ourovac® Aftosa.html">Ourovac® Aftosa</a></td>
+				<td><span th:text="${medicine.description}"></span>Vacina contra a febre Aftosa</td>
+				<td><span class="dd/MM/yyyy" th:text="${medicine.expiration}"></span>31/12/2019</td>
+				<td><span th:text="${medicine.type}"></span>Via subcutânea</td>
+				<td><a class="waves-effect waves-light btn-small"
+										th:href="${(#mvc.url('AC#deletarRemedio').arg(0, remedio.cod)).build()}"><i
+										class="material-icons left">delete</i></a></td>
+			</tr>
+		</tbody>
 
-</div>
+	</table>
 
-<script type="text/javascript"
-src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".button-collapse").sideNav();
-	})
-</script>
+	<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".button-collapse").sideNav();
+		})
+	</script>
 
 </body>
 
