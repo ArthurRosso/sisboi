@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<title>Sisboi - Animal</title>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+
+<!--Import materialize.css-->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+
+</head>
+
+<body>
+
+	<header>
+
+		<nav class="teal darken-4">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
+					data-activates="mobile-demo" class="button-collapse"><i
+					class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="/newAnimal">New Animal</a></li>
+					<li><a href="/newMedicine">New Medicine</a></li>
+					<li><a href="/showAnimals">Show Animals</a></li>
+					<li><a href="/showMedicines">Show Medicines</a></li>
+					<li><a href="/doMedication">Do Medication</a></li>
+					<li><a href="/logout">Logout</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="/newAnimal">New Animal</a></li>
+					<li><a href="/newMedicine">New Medicine</a></li>
+					<li><a href="/showAnimals">Show Animals</a></li>
+					<li><a href="/showMedicines">Show Medicines</a></li>
+					<li><a href="/doMedication">Do Medication</a></li>
+					<li><a href="/logout">Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<!-- Page Layout here -->
+	<div class="row">
+
+		<div class="col s12 m4 l3">
+
+			<div class="row">
+				<div class="card-panel">
+					<div class="center-align">
+						<img src="../../img/João.jpg" alt="Avatar" style="width: 200px" />
+					</div>
+					<div class="center-align">
+						<span th:text="${animal.id}"></span>
+					</div>
+				</div>
+
+				<div class="card-panel">
+					<div class="center-align">
+						<h5>Details:</h5>
+					</div>
+					<div class="row">
+
+						<div th:each="animal : ${animal}">
+							<div class="row">
+								<p>
+									Id: <span th:text="${animal.id}"></span>
+								</p>
+								<p>
+									Birthday: <span th:text="${animal.birthday}"></span>
+								</p>
+								<p>
+									Weight: <span th:text="${animal.getLastWeight()}"></span>
+								</p>
+								<p>
+									Type: <span th:text="${animal.type}"></span>
+								</p>
+								<p>
+									Breed: <span th:text="${animal.breed}"></span>
+								</p>
+								<p>
+									Purpose: <span th:text="${animal.getPurposes()}"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="card-panel">
+					<div class="center-align">
+						<h5>Árvore genealógica:</h5>
+					</div>
+					<div class="row">
+
+						<div class="col s6">
+							<p>Pai:</p>
+							<img src="../../img/José.jpg" style="width: 100px" />
+						</div>
+						<div class="col s6">
+							<p>Mãe:</p>
+							<img src="../../img/Maria.png" style="width: 100px" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="col s12 m8 l9">
+			<!-- Note that "m8 l9" was added -->
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<div class="row">
+
+						<div class="col s6">
+							<img src="../../img/João.jpg" style="width: 200px" />
+						</div>
+						<div class="col s6">
+							<img
+								src="http://ourofinosaudeanimal.com/media/uploads/produtos/2018/Ourovac_Aftosa_50ml_OF45.png"
+								style="width: 200px" />
+						</div>
+
+					</div>
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>
+							Nova medicação de <span th:text="${animal.id}"></span> com a
+							Ourovac® Aftosa!
+						</p>
+					</div>
+					<div class="card-action">
+						<a href="/{animal.cod}">Ver <span th:text="${animal.id}"></span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card horizontal">
+				<div class="card-image">
+					<img src="../../img/João.jpg" style="width: 200px" />
+				</div>
+				<div class="card-stacked">
+					<div class="card-content">
+						<p>
+							<span th:text="${animal.id}"></span> adicionado com sucesso!
+						</p>
+					</div>
+					<div class="card-action">
+						<a href="/{animal.cod}">Ver <span th:text="${animal.id}"></span></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".button-collapse").sideNav();
+		})
+	</script>
+</body>
+
+
+</html>

@@ -12,19 +12,19 @@ public class Role {
 
 	@Id
 	@GeneratedValue
-	private Long cod;
+	private Long id;
 	
 	private String role;
 	
 	@ManyToMany
 	private Set<User> accounts;
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getRole() {

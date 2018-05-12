@@ -19,7 +19,7 @@ public class TypeAnimal implements Serializable {
 	@Id
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
-	private Long cod;
+	private Long id;
 	
 	private String type;
 	
@@ -31,12 +31,12 @@ public class TypeAnimal implements Serializable {
 	@ManyToOne
 	private Breed breed;
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getType() {

@@ -14,7 +14,7 @@ public class File {
 	
 	@Id
 	@GeneratedValue
-	private Long cod;
+	private Long id;
 	
 	private String description;
 	
@@ -32,12 +32,12 @@ public class File {
 				: "data:image/png;base64," + Base64Utils.encodeToString(content));
 	}
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getDescription() {

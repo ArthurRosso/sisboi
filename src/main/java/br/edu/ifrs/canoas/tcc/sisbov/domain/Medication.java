@@ -19,7 +19,7 @@ public class Medication implements Serializable {
 	@Id
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
-	private Long cod;
+	private Long id;
 	
 	private Date date;
 	
@@ -29,12 +29,12 @@ public class Medication implements Serializable {
 	@ManyToMany
 	private List<Medicine> medicine;
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Date getDate() {

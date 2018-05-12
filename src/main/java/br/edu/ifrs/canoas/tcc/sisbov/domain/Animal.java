@@ -21,9 +21,9 @@ public class Animal implements Serializable {
 	@Id
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
-	private Long cod;
+	private Long id;
 
-	private String id;
+	private String name;
 
 	private Date birthday;
 	
@@ -45,20 +45,20 @@ public class Animal implements Serializable {
 	@ManyToMany
 	private List<Medication> medication;
 
-	public Long getCod() {
-		return cod;
-	}
-
-	public void setCod(Long cod) {
-		this.cod = cod;
-	}
-
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Date getBirthday() {

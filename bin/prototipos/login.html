@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+	<title>Sisboi - Entrar</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+
+	<!--Import materialize.css-->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+
+	<link rel="stylesheet" href="css/login-style.css" />
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col s6 offset-s3 z-depth-1" id="panell">
+				<h5 id="title">Entrar</h5>
+				<form th:action="@{/login}" method="post" class="form-signin">
+
+					<div class="input-field" id="username">
+						<input type="text" id="username" name="username" /><label for="username">Username</label>
+					</div>
+					<div class="input-field" id="password">
+						<input type="password" id="password" name="password" /><label for="password">Password</label>
+					</div>
+					<p>
+						Novo por aqui? <a href="http://google.com">Registre-se</a> hoje!
+					</p>
+					<div class="right-align">
+						<a class="btn waves-effect waves-light teal darken-3" href="index.html">Enviar <i class="material-icons right">send</i></a>
+						
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript"
+src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>

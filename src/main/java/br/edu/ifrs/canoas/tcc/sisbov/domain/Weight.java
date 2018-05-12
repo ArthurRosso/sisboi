@@ -18,9 +18,9 @@ public class Weight implements Serializable {
 	@Id
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
-	private Long cod;
+	private Long id;
 	
-	private float nweight;
+	private float weight;
 	
 	private String description;
 	
@@ -29,20 +29,20 @@ public class Weight implements Serializable {
 	@ManyToOne
 	private Animal animal;
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public float getNweight() {
-		return nweight;
+	public float getWeight() {
+		return weight;
 	}
 
-	public void setNweight(float nweight) {
-		this.nweight = nweight;
+	public void setWeight(float weight) {
+		this.weight = weight;
 	}
 
 	public String getDescription() {
@@ -70,6 +70,6 @@ public class Weight implements Serializable {
 	}
 	
 	public String toString () {
-		return Float.toString(getNweight());
+		return Float.toString(getWeight());
 	}
 }

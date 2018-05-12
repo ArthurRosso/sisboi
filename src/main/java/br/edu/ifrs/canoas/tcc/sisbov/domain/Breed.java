@@ -18,7 +18,7 @@ public class Breed implements Serializable {
 	@Id
 	@GeneratedValue(generator = "increment") 
 	@GenericGenerator( name = "increment", strategy = "increment")
-	private Long cod;
+	private Long id;
 	
 	private String breed;
 	
@@ -30,12 +30,12 @@ public class Breed implements Serializable {
 	@OneToMany (mappedBy = "breed")
 	private List<TypeAnimal> typeAnimal;
 
-	public Long getCod() {
-		return cod;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCod(Long cod) {
-		this.cod = cod;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getBreed() {

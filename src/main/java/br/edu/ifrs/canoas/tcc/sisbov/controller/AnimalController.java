@@ -39,8 +39,8 @@ public class AnimalController {
 	}
 	
 	@RequestMapping(value="/{cod}", method=RequestMethod.GET)
-	public ModelAndView detailsAnimal (@PathVariable("cod") Long cod) {
-		Animal animal = ar.findByCod(cod);
+	public ModelAndView detailsAnimal (@PathVariable("id") Long id) {
+		Animal animal = ar.findById(id);
 		ModelAndView mv = new ModelAndView("animal");
 		mv.addObject("animal", animal);
 		
