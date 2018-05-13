@@ -127,6 +127,7 @@ public class Animal implements Serializable {
 		this.medication = medication;
 	}
 	
+	
 	public String getLastWeight() {
 		if (weight.isEmpty()) {
 			return "-";

@@ -7,21 +7,21 @@ import br.edu.ifrs.canoas.tcc.sisbov.repository.UserRepository;
 @Service
 public class UserService {
 	
-	private final UserRepository userRepository;
+	private final UserRepository ur;
 
-	public UserService(UserRepository userRepository) {
-		this.userRepository = userRepository;
+	public UserService (UserRepository ur) {
+		this.ur = ur;
 	}
 
-	public User save(User user) {
+	public User save (User user) {
 		User fetchedUser = this.getOne(user);
 		fetchedUser.setUsername(user.getUsername());
 		fetchedUser.setEmail(user.getEmail());
-		return userRepository.save(fetchedUser);
+		return ur.save(fetchedUser);
 	}
 
-	public User getOne(User user) {
-		return userRepository.findByUsername(user.getUsername()).get();
+	public User getOne (User user) {
+		return ur.findByUsername(user.getUsername()).get();
 	}
 
 }
