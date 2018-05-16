@@ -14,15 +14,15 @@ INSERT INTO ROLE (id, role) VALUES (2, 'ROLE_USER');
 INSERT INTO USER_ROLES (user_username, roles_id) VALUES ('ArthurRosso', 1);
 INSERT INTO USER_ROLES (user_username, roles_id) VALUES ('teste', 2);
 
-INSERT INTO ANIMAL (id, active, birthday, id, breed_id, type_id, user_username) VALUES (1, TRUE, parsedatetime('23/07/2015', 'dd/MM/yyyy'), 'José', 1, 1, 'ArthurRosso');
-INSERT INTO ANIMAL (id, active, birthday, id, breed_id, type_id, user_username) VALUES (2, TRUE, parsedatetime('01/02/2016', 'dd/MM/yyyy'), 'Maria', 1, 2, 'ArthurRosso');
-INSERT INTO ANIMAL (id, active, birthday, id, breed_id, type_id, user_username) VALUES (3, TRUE, parsedatetime('22/01/2018', 'dd/MM/yyyy'), 'João', 1, 3, 'ArthurRosso');
+INSERT INTO ANIMAL (id, active, birthday, name, breed_id, type_id, user_username) VALUES (1, TRUE, parsedatetime('23/07/2015', 'dd/MM/yyyy'), 'José', 1, 1, 'ArthurRosso');
+INSERT INTO ANIMAL (id, active, birthday, name, breed_id, type_id, user_username) VALUES (2, TRUE, parsedatetime('01/02/2016', 'dd/MM/yyyy'), 'Maria', 1, 2, 'ArthurRosso');
+INSERT INTO ANIMAL (id, active, birthday, name, breed_id, type_id, user_username) VALUES (3, TRUE, parsedatetime('22/01/2018', 'dd/MM/yyyy'), 'João', 1, 3, 'ArthurRosso');
 
 INSERT INTO FILE (id, content) VALUES (1,  FILE_READ('./src/main/resources/static/img/face.png'));
 INSERT INTO FILE (id, content) VALUES (2, FILE_READ('./src/main/resources/static/img/tio.png'));
 
-INSERT INTO WEIGHT (id, date, description, nweight, animal_id) VALUES (1, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '800', 1);
-INSERT INTO WEIGHT (id, date, description, nweight, animal_id) VALUES (2, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '750', 2);
+INSERT INTO WEIGHT (id, date, description, weight, animal_id) VALUES (1, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '800', 1);
+INSERT INTO WEIGHT (id, date, description, weight, animal_id) VALUES (2, parsedatetime('06/04/2018', 'dd/MM/yyyy'), 'Pesagem do mês de abril', '750', 2);
 
 INSERT INTO MEDICATION (id, date) VALUES (1, parsedatetime('12/04/2018', 'dd/MM/yyyy'));
 
@@ -43,7 +43,7 @@ INSERT INTO PURPOSE (id, purpose, description) VALUES (1, 'Genética', 'Animal d
 INSERT INTO PURPOSE (id, purpose, description) VALUES (2, 'Leite', 'Animal destinado a produção de leite.');
 INSERT INTO PURPOSE (id, purpose, description) VALUES (3, 'Engorda', 'Animal destinado a engorda para produção de carne.');
 
-INSERT INTO ANIMAL_PURPOSE (purpose_id, animal_id) VALUES (1,1);
-INSERT INTO ANIMAL_PURPOSE (purpose_id, animal_id) VALUES (2,2);
-INSERT INTO ANIMAL_PURPOSE (purpose_id, animal_id) VALUES (3,2);
-INSERT INTO ANIMAL_PURPOSE (purpose_id, animal_id) VALUES (3,3);
+INSERT INTO PURPOSE_ANIMAL (purposes_id, animal_id) VALUES (1,1);
+INSERT INTO PURPOSE_ANIMAL (purposes_id, animal_id) VALUES (2,2);
+INSERT INTO PURPOSE_ANIMAL (purposes_id, animal_id) VALUES (3,2);
+INSERT INTO PURPOSE_ANIMAL (purposes_id, animal_id) VALUES (3,3);

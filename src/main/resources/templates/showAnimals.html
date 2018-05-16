@@ -58,8 +58,8 @@
 		</thead>
 		<tbody>
 			<tr th:each="animal : ${animals}">
-				<td><a th:href="${(#mvc.url('AC#detailsAnimal').arg(0, animal.cod)).build()}"><span
-						th:text="${animal.id}"></span></a></td>
+				<td><span
+						th:text="${animal.name}"></span></td>
 				<td><span th:text="${animal.birthday}"></span></td>
 				<td><span th:text="${animal.getLastWeight()}"></span></td>
 				<td><span th:text="${animal.type}"></span></td>

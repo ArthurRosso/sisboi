@@ -25,8 +25,8 @@
 		<nav class="teal darken-4">
 			<div class="nav-wrapper">
 				<a href="/" class="brand-logo">Sisboi</a> <a href="/"
-				data-activates="mobile-demo" class="button-collapse"><i
-				class="material-icons">menu</i></a>
+					data-activates="mobile-demo" class="button-collapse"><i
+					class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="/newAnimal">New Animal</a></li>
 					<li><a href="/newMedicine">New Medicine</a></li>
@@ -51,25 +51,36 @@
 	<div class="row">
 		<div class="container">
 			<div class="card-panel">
-				<form method="post">
+				<form method="post" th:action="@{/save}" th:object="${animal}">
+					<input type="hidden" th:field="*{id}" />
 					<div class="row">
 						<div class="input-field col s3">
-							Id: <input type="text" name="id" />
+							Name: <input type="text" th:field="*{name}" />
 						</div>
 						<div class="input-field col s3">
-							Birthday: <input type="date" name="birthday" />
+							Birthday: <input type="date" th:field="*{birthday}" />
 						</div>
 						<div class="input-field col s3">
-							Weight: <input type="text" />
+							Weight: <input type="text" th:field="${peso}" />
 						</div>
 						<div class="input-field col s3">
-							Type: <input type="text" />
+							Type: <select th:field="*{type.id}">
+								<option th:each="type : ${types}" th:value="${type.id}"
+									th:text="${type.type}"/>
+							</select>
 						</div>
 						<div class="input-field col s3">
-							Breed: <input type="text" />
+							Breed: <select th:field="*{breed.id}">
+								<option th:each="breed : ${breeds}" th:value="${breed.id}"
+									th:text="${breed.breed}"></option>
+							</select>
 						</div>
 						<div class="input-field col s3">
-							Purpose: <input type="text" />
+							Purpose: 
+								<select multiple="multiple" name="purposes" th:field="*{purposes}">
+									<option th:each="purpose : ${purposeList}"
+										th:value="${purpose.id}" th:text="${purpose.purpose}" />
+								</select>
 						</div>
 						<div class="input-field col s6">
 							<div class="file-field input-field">
@@ -100,6 +111,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".button-collapse").sideNav();
+			$('select').material_select();
 		})
 	</script>
 

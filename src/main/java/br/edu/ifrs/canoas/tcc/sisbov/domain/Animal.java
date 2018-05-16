@@ -32,14 +32,14 @@ public class Animal implements Serializable {
 	@ManyToOne
 	private User user;
 	
-	@OneToMany (mappedBy = "animal")
+	@OneToMany(mappedBy = "animal")
 	private List<Weight> weight;
 	
 	@ManyToOne
 	private Breed breed;
 	
-	@ManyToMany
-	private List<Purpose> purpose;
+	@ManyToMany(mappedBy = "animal")
+	private List<Purpose> purposes;
 	
 	@ManyToOne
 	private TypeAnimal type;
@@ -103,12 +103,12 @@ public class Animal implements Serializable {
 		this.breed = breed;
 	}
 
-	public List<Purpose> getPurpose() {
-		return purpose;
+	public List<Purpose> getPurposes() {
+		return purposes;
 	}
 
-	public void setPurpose(List<Purpose> purpose) {
-		this.purpose = purpose;
+	public void setPurposes(List<Purpose> purposes) {
+		this.purposes = purposes;
 	}
 
 	public TypeAnimal getType() {
@@ -135,12 +135,12 @@ public class Animal implements Serializable {
 		return this.weight.get(weight.size()-1).toString();
 	}
 	
-	public String getPurposes(){
-		if (purpose.isEmpty()) {
+	public String printPurposes(){
+		if (purposes.isEmpty()) {
 			return "-";
 		}
-		String res = purpose.get(0).toString();
-		for (Purpose p : purpose.subList(1, purpose.size())){
+		String res = purposes.get(0).toString();
+		for (Purpose p : purposes.subList(1, purposes.size())){
 			res += ", " + p;
 		}
 		
